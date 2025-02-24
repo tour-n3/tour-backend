@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://tourn3.live:5432/tourdb
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE  # Hiển thị giá trị của parameters trong câu SQL
