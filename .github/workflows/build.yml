@@ -72,8 +72,8 @@ jobs:
             # Chạy container mới
             docker run -d \
               --name tour-backend \
-              --env-file tour-backend/.env \     # File .env là tùy chọn, nếu có
-              -p 8080:8080 \        # Mapping cổng 8080
+              --env-file tour-backend/.env \
+              -p 8080:8080 \
               --restart always \
               tour-backend:latest
 
