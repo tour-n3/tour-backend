@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://tourn3.live:5432/tourdb
-    username: postgres
-    password: postgres
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
