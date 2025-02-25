@@ -62,7 +62,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            ps aux | grep dockerd
             # Nạp lại Docker image từ file tar
             docker load -i ~/tour-backend/tour-backend.tar
 
