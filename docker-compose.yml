@@ -1,0 +1,14 @@
+name: tour-project
+
+services:
+  tour-backend:
+    build: .
+    image: tour-backend:latest
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+
+networks:
+  default:
+    name: tour_network
