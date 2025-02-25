@@ -1,16 +1,16 @@
-name: Java CI/CD Pipeline with Gradle
+name: CI/CD Pipeline with SSH Deployment
 
-# Khi nào pipeline chạy: mỗi khi có push hoặc pull request vào nhánh main
 on:
   push:
     branches:
-      - main
+      - main  # Chạy khi có commit lên nhánh "main"
   pull_request:
     branches:
-      - main
+      - main  # Chạy trên Pull Request đến nhánh "main"
 
 jobs:
-  build-and-test:
+  build-and-deploy:
+    # Job thực hiện build & deploy Docker Image qua SSH
     runs-on: ubuntu-latest
 
     steps:
@@ -18,28 +18,64 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Bước 2: Thiết lập JDK
+      # Bước 2: Set up JDK để build ứng dụng (nếu sử dụng Java)
       - name: Set up JDK 23
         uses: actions/setup-java@v4
         with:
-          java-version: '23' # Thay đổi nếu bạn dùng version khác
+          java-version: '23'
           distribution: 'temurin'
 
-      # Bước 3: Cấp quyền thực thi cho Gradle wrapper (nếu có)
+      # Bước 3: Build ứng dụng (nếu cần thiết)
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # Bước 4: Build ứng dụng với Gradle
       - name: Build with Gradle
-        run: ./gradlew build -x test # Build mà không chạy test
+        run: ./gradlew build -x test
 
-      # Bước 5: Chạy test
-      - name: Run tests
-        run: ./gradlew test
+      # Bước 4: Build Docker Image
+      - name: Build Docker Image
+        run: |
+          docker build -t tour-backend:latest .
 
-      # Bước 6: Lưu trữ artifact (file .jar hoặc .war đã build)
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      # Bước 5: Export Docker Image ra file .tar
+      - name: Save Docker Image to File
+        run: |
+          docker save tour-backend:latest -o tour-backend.tar
+
+      # Bước 6: Upload Docker Image tới server qua SSH
+      - name: Upload Docker Image to Server
+        uses: appleboy/scp-action@v0.1.1
         with:
-          name: app-artifact
-          path: build/libs/*.jar # Đường dẫn mặc định của Gradle cho file JAR
+          host: ${{ secrets.SERVER_HOST }}  # Địa chỉ IP hoặc tên miền của server
+          username: ${{ secrets.SERVER_USERNAME }}  # Tài khoản SSH
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Private key
+          port: 22  # Cổng SSH (thường là 22)
+          source: "tour-backend.tar"  # File .tar cần truyền
+          target: "~/tour-backend/tour-backend.tar"  # Đích trên server
+
+      # Bước 7: SSH vào server và triển khai container từ Docker Image
+      - name: Deploy Docker Container to Server
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Nạp lại Docker image từ file tar
+            docker load -i ~/tour-backend/tour-backend.tar
+
+            # Dừng và xóa container cũ nếu đang chạy
+            docker stop tour-backend || true
+            docker rm tour-backend || true
+
+            # Chạy container mới
+            docker run -d \
+              --name tour-backend \
+              --env-file .env \     # File .env là tùy chọn, nếu có
+              -p 8080:8080 \        # Mapping cổng 8080
+              --restart always \
+              tour-backend:latest
+
+            # Xóa file tar sau khi hoàn tất
+            rm -f ~/tour-backend.tar
