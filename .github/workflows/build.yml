@@ -51,7 +51,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Private key
           port: 22  # Cổng SSH (thường là 22)
           source: "tour-backend.tar"  # File .tar cần truyền
-          target: "~/tour-backend/tour-backend.tar"  # Đích trên server
+          target: "~/tour-backend/"  # Đích trên server
 
       # Bước 7: SSH vào server và triển khai container từ Docker Image
       - name: Deploy Docker Container to Server
