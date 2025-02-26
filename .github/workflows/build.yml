@@ -63,7 +63,7 @@ jobs:
           port: 22
           script: |
             # Tạo mạng 'tour-network' nếu nó chưa tồn tại
-            docker network create tour-network || true
+            docker network create tour_network || true
 
             # Nạp lại Docker image từ file tar
             docker load -i ~/tour-backend/tour-backend.tar
