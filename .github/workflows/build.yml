@@ -62,6 +62,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            # Tạo mạng 'tour-network' nếu nó chưa tồn tại
+            docker network create tour-network || true
+
             # Nạp lại Docker image từ file tar
             docker load -i ~/tour-backend/tour-backend.tar
 
@@ -74,6 +77,7 @@ jobs:
               --name tour-backend \
               --env-file tour-backend/.env \
               -p 8080:8080 \
+              --network tour_network \
               --restart always \
               tour-backend:latest
 
