@@ -73,6 +73,10 @@ jobs:
             # Dừng và xóa container cũ nếu đang chạy
             docker stop tour-backend || true
             docker rm tour-backend || true
+            
+            # Xóa image cũ để giải phóng dung lượng
+            docker image prune -f
+            docker rmi $(docker images 'tour-backend' --filter "dangling=false" -q) || true
 
             # Chạy container mới
             docker run -d \
