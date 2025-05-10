@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: ${DB_URL:jdbc:postgresql://127.0.0.1:15432/tourn3}
+    username: ${DB_USERNAME:tourn3}
+    password: ${DB_PASSWORD:tourn3}
 
   jpa:
     hibernate:
