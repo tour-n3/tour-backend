@@ -15,7 +15,7 @@ import java.time.Instant;
 @Setter
 @Entity
 @Table(name = "applicationuser", schema = "dbo")
-public class Applicationuser {
+public class ApplicationUser {
     @Id
     @Size(max = 128)
     @Column(name = "id", nullable = false, length = 128)
@@ -26,51 +26,51 @@ public class Applicationuser {
 
     @NotNull
     @Column(name = "emailconfirmed", nullable = false)
-    private Boolean emailconfirmed = false;
+    private Boolean emailConfirmed = false;
 
     @Column(name = "passwordhash", length = Integer.MAX_VALUE)
-    private String passwordhash;
+    private String passwordHash;
 
     @Column(name = "securitystamp", length = Integer.MAX_VALUE)
-    private String securitystamp;
+    private String securityStamp;
 
     @Column(name = "phonenumber", length = Integer.MAX_VALUE)
-    private String phonenumber;
+    private String phoneNumber;
 
     @NotNull
     @Column(name = "phonenumberconfirmed", nullable = false)
-    private Boolean phonenumberconfirmed = false;
+    private Boolean phoneNumberConfirmed = false;
 
     @NotNull
     @Column(name = "twofactorenabled", nullable = false)
-    private Boolean twofactorenabled = false;
+    private Boolean twoFactorEnabled = false;
 
     @Column(name = "lockoutenddateutc")
-    private Instant lockoutenddateutc;
+    private Instant lockoutEndDateUtc;
 
     @NotNull
     @Column(name = "lockoutenabled", nullable = false)
-    private Boolean lockoutenabled = false;
+    private Boolean lockoutEnabled = false;
 
     @NotNull
     @Column(name = "accessfailedcount", nullable = false)
-    private Integer accessfailedcount;
+    private Integer accessFailedCount;
 
     @NotNull
     @Column(name = "username", nullable = false, length = Integer.MAX_VALUE)
     private String username;
 
     @Column(name = "resetpasswordtimeout")
-    private Instant resetpasswordtimeout;
+    private Instant resetPasswordTimeout;
 
     @Column(name = "passwordavailableenddate")
-    private Instant passwordavailableenddate;
+    private Instant passwordAvailableEndDate;
 
     @Column(name = "applicationrolename", length = Integer.MAX_VALUE)
-    private String applicationrolename;
+    private String applicationRoleName;
 
     @Column(name = "updateapplicationuserid", length = Integer.MAX_VALUE)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @Size(max = 128)
     @NotNull
@@ -78,12 +78,12 @@ public class Applicationuser {
     private String discriminator;
 
     @Column(name = "concurrencystamp", length = Integer.MAX_VALUE)
-    private String concurrencystamp;
+    private String concurrencyStamp;
 
     @Column(name = "normalizedusername", length = Integer.MAX_VALUE)
-    private String normalizedusername;
+    private String normalizedUsername;
 
     @Column(name = "normalizedemail", length = Integer.MAX_VALUE)
-    private String normalizedemail;
+    private String normalizedEmail;
 
 }

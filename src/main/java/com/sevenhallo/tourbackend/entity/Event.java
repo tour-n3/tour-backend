@@ -22,62 +22,62 @@ public class Event {
 
     @NotNull
     @Column(name = "eventidstring", nullable = false, length = Integer.MAX_VALUE)
-    private String eventidstring;
+    private String eventIdString;
 
     @Column(name = "eventname_ja", length = Integer.MAX_VALUE)
-    private String eventnameJa;
+    private String eventNameJa;
 
     @Column(name = "eventname_en", length = Integer.MAX_VALUE)
-    private String eventnameEn;
+    private String eventNameEn;
 
     @NotNull
     @Column(name = "eventcode", nullable = false, length = Integer.MAX_VALUE)
-    private String eventcode;
+    private String eventCode;
 
     @NotNull
     @Column(name = "eventenablestartdate", nullable = false)
-    private Instant eventenablestartdate;
+    private Instant eventEnableStartDate;
 
     @NotNull
     @Column(name = "eventenableenddate", nullable = false)
-    private Instant eventenableenddate;
+    private Instant eventEnableEndDate;
 
     @Column(name = "organizername", length = Integer.MAX_VALUE)
-    private String organizername;
+    private String organizerName;
 
     @Column(name = "organizermail", length = Integer.MAX_VALUE)
-    private String organizermail;
+    private String organizerMail;
 
     @Column(name = "organizerzip", length = Integer.MAX_VALUE)
-    private String organizerzip;
+    private String organizerZip;
 
     @Column(name = "organizeraddress", length = Integer.MAX_VALUE)
-    private String organizeraddress;
+    private String organizerAddress;
 
     @Column(name = "organizertel", length = Integer.MAX_VALUE)
-    private String organizertel;
+    private String organizerTel;
 
     @Column(name = "organizerfax", length = Integer.MAX_VALUE)
-    private String organizerfax;
+    private String organizerFax;
 
     @NotNull
     @Column(name = "stopflag", nullable = false)
-    private Boolean stopflag = false;
+    private Boolean stopFlag = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

@@ -23,7 +23,7 @@ public class Content {
 
     @NotNull
     @Column(name = "contentstype", nullable = false)
-    private Integer contentstype;
+    private Integer contentsType;
 
     @Column(name = "name_ja", length = Integer.MAX_VALUE)
     private String nameJa;
@@ -32,10 +32,10 @@ public class Content {
     private String nameEn;
 
     @Column(name = "catchcopy_ja", length = Integer.MAX_VALUE)
-    private String catchcopyJa;
+    private String catchCopyJa;
 
     @Column(name = "catchcopy_en", length = Integer.MAX_VALUE)
-    private String catchcopyEn;
+    private String catchCopyEn;
 
     @Column(name = "detail_ja", length = Integer.MAX_VALUE)
     private String detailJa;
@@ -45,7 +45,7 @@ public class Content {
 
     @NotNull
     @Column(name = "visibleflag", nullable = false)
-    private Boolean visibleflag = false;
+    private Boolean visibleFlag = false;
 
     @Column(name = "address_ja", length = Integer.MAX_VALUE)
     private String addressJa;
@@ -59,7 +59,7 @@ public class Content {
 
     @Size(max = 20)
     @Column(name = "cellphone", length = 20)
-    private String cellphone;
+    private String cellPhone;
 
     @Size(max = 20)
     @Column(name = "fax", length = 20)
@@ -71,35 +71,35 @@ public class Content {
 
     @Size(max = 250)
     @Column(name = "submail", length = 250)
-    private String submail;
+    private String subMail;
 
     @NotNull
     @Column(name = "displaykumanokodopageflag", nullable = false)
-    private Integer displaykumanokodopageflag;
+    private Integer displayKumanoKodoPageFlag;
 
     @NotNull
     @Column(name = "releasetelflag", nullable = false)
-    private Boolean releasetelflag = false;
+    private Boolean releaseTelFlag = false;
 
     @NotNull
     @Column(name = "releasefaxflag", nullable = false)
-    private Boolean releasefaxflag = false;
+    private Boolean releaseFaxFlag = false;
 
     @NotNull
     @Column(name = "releasemailflag", nullable = false)
-    private Boolean releasemailflag = false;
+    private Boolean releaseMailFlag = false;
 
     @NotNull
     @Column(name = "sendfaxflag", nullable = false)
-    private Integer sendfaxflag;
+    private Integer sendFaxFlag;
 
     @NotNull
     @Column(name = "sendmailflag", nullable = false)
-    private Integer sendmailflag;
+    private Integer sendMailFlag;
 
     @NotNull
     @Column(name = "sendmailapprovalrequestflag", nullable = false)
-    private Integer sendmailapprovalrequestflag;
+    private Integer sendMailApprovalRequestFlag;
 
     @NotNull
     @Column(name = "language_ja", nullable = false)
@@ -111,120 +111,120 @@ public class Content {
 
     @Size(max = 100)
     @Column(name = "urlcode", length = 100)
-    private String urlcode;
+    private String urlCode;
 
     @Size(max = 20)
     @Column(name = "supplierid", length = 20)
-    private String supplierid;
+    private String supplierId;
 
     @NotNull
     @Column(name = "sendmailconfirmflag", nullable = false)
-    private Integer sendmailconfirmflag;
+    private Integer sendMailConfirmFlag;
 
     @NotNull
     @Column(name = "stockflag", nullable = false)
-    private Integer stockflag;
+    private Integer stockFlag;
 
     @Size(max = 20)
     @Column(name = "mapcode", length = 20)
-    private String mapcode;
+    private String mapCode;
 
     @Size(max = 500)
     @Column(name = "googlemap", length = 500)
-    private String googlemap;
+    private String googleMap;
 
     @Size(max = 500)
     @Column(name = "areamap", length = 500)
-    private String areamap;
+    private String areaMap;
 
     @Size(max = 500)
     @Column(name = "kumanokodomap", length = 500)
-    private String kumanokodomap;
+    private String kumanoKodoMap;
 
     @NotNull
     @Column(name = "contentsdetailtitleviewtype", nullable = false)
-    private Integer contentsdetailtitleviewtype;
+    private Integer contentsDetailTitleViewType;
 
     @Column(name = "checkinstarthour")
-    private Integer checkinstarthour;
+    private Integer checkInStartHour;
 
     @Column(name = "checkinstartminute")
-    private Integer checkinstartminute;
+    private Integer checkInStartMinute;
 
     @Column(name = "checkinendhour")
-    private Integer checkinendhour;
+    private Integer checkInEndHour;
 
     @Column(name = "checkinendminute")
-    private Integer checkinendminute;
+    private Integer checkInEndMinute;
 
     @Column(name = "checkouthour")
-    private Integer checkouthour;
+    private Integer checkOutHour;
 
     @Column(name = "checkoutminute")
-    private Integer checkoutminute;
+    private Integer checkOutMinute;
 
     @Column(name = "curfewhour")
-    private Integer curfewhour;
+    private Integer curfewHour;
 
     @Column(name = "curfewminute")
-    private Integer curfewminute;
+    private Integer curfewMinute;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @NotNull
     @ColumnDefault("0")
     @Column(name = "contactflag", nullable = false)
-    private Integer contactflag;
+    private Integer contactFlag;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "stockeditflag", nullable = false)
-    private Boolean stockeditflag = false;
+    private Boolean stockEditFlag = false;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "pricepatterneditflag", nullable = false)
-    private Boolean pricepatterneditflag = false;
+    private Boolean pricePatternEditFlag = false;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "paidtosupplierinfoflag", nullable = false)
-    private Boolean paidtosupplierinfoflag = false;
+    private Boolean paidToSupplierInfoFlag = false;
 
     @NotNull
     @Column(name = "adminmemotype", nullable = false)
-    private Integer adminmemotype;
+    private Integer adminMemoType;
 
     @NotNull
     @Column(name = "sendfaxconfirmflag", nullable = false)
-    private Integer sendfaxconfirmflag;
+    private Integer sendFaxConfirmFlag;
 
     @Column(name = "adminmemo", length = Integer.MAX_VALUE)
-    private String adminmemo;
+    private String adminMemo;
 
     @Column(name = "adminmemoupdatedate")
-    private Instant adminmemoupdatedate;
+    private Instant adminMemoUpdateDate;
 
     @Size(max = 128)
     @Column(name = "adminmemoupdateuserid", length = 128)
-    private String adminmemoupdateuserid;
+    private String adminMemoUpdateUserId;
 
     @NotNull
     @Column(name = "sendfaxapprovalrequestflag", nullable = false)
-    private Integer sendfaxapprovalrequestflag;
+    private Integer sendFaxApprovalRequestFlag;
 
 }

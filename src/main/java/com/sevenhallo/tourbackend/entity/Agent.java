@@ -23,7 +23,7 @@ public class Agent {
     @Size(max = 10)
     @NotNull
     @Column(name = "agentcode", nullable = false, length = 10)
-    private String agentcode;
+    private String agentCode;
 
     @Column(name = "name_ja", length = Integer.MAX_VALUE)
     private String nameJa;
@@ -33,7 +33,7 @@ public class Agent {
 
     @Size(max = 10)
     @Column(name = "postcode", length = 10)
-    private String postcode;
+    private String postCode;
 
     @Size(max = 200)
     @Column(name = "address", length = 200)
@@ -49,48 +49,48 @@ public class Agent {
 
     @NotNull
     @Column(name = "countrycode", nullable = false)
-    private Integer countrycode;
+    private Integer countryCode;
 
     @Size(max = 20)
     @Column(name = "cellphone", length = 20)
-    private String cellphone;
+    private String cellPhone;
 
     @Size(max = 100)
     @Column(name = "imagepath", length = 100)
-    private String imagepath;
+    private String imagePath;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @NotNull
     @Column(name = "depositflag", nullable = false)
-    private Boolean depositflag = false;
+    private Boolean depositFlag = false;
 
     @Column(name = "adminmemo", length = Integer.MAX_VALUE)
-    private String adminmemo;
+    private String adminMemo;
 
     @Column(name = "adminmemoupdatedate")
-    private Instant adminmemoupdatedate;
+    private Instant adminMemoUpdateDate;
 
     @Size(max = 128)
     @Column(name = "adminmemoupdateuserid", length = 128)
-    private String adminmemoupdateuserid;
+    private String adminMemoUpdateUserId;
 
     @NotNull
     @Column(name = "adminmemotype", nullable = false)
-    private Integer adminmemotype;
+    private Integer adminMemoType;
 
 }

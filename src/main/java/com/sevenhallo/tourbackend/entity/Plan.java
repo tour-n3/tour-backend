@@ -25,7 +25,7 @@ public class Plan {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "contentsid", nullable = false)
-    private Content contentsid;
+    private Content contentsId;
 
     @Column(name = "name_ja", length = Integer.MAX_VALUE)
     private String nameJa;
@@ -40,60 +40,60 @@ public class Plan {
     private String detailEn;
 
     @Column(name = "messagetomember_ja", length = Integer.MAX_VALUE)
-    private String messagetomemberJa;
+    private String messageToMemberJa;
 
     @Column(name = "messagetomember_en", length = Integer.MAX_VALUE)
-    private String messagetomemberEn;
+    private String messageToMemberEn;
 
     @NotNull
     @Column(name = "roomflag", nullable = false)
-    private Integer roomflag;
+    private Integer roomFlag;
 
     @NotNull
     @Column(name = "stockdisplayflag", nullable = false)
-    private Integer stockdisplayflag;
+    private Integer stockDisplayFlag;
 
     @NotNull
     @Column(name = "pricetype", nullable = false)
-    private Integer pricetype;
+    private Integer priceType;
 
     @NotNull
     @Column(name = "perpiecemin", nullable = false)
-    private Integer perpiecemin;
+    private Integer perPieceMin;
 
     @NotNull
     @Column(name = "perpiecemax", nullable = false)
-    private Integer perpiecemax;
+    private Integer perPieceMax;
 
     @NotNull
     @Column(name = "planroomdisplaytype", nullable = false)
-    private Integer planroomdisplaytype;
+    private Integer planRoomDisplayType;
 
     @NotNull
     @Column(name = "postspanstart", nullable = false)
-    private LocalDate postspanstart;
+    private LocalDate postSpanStart;
 
     @Column(name = "postspanend")
-    private LocalDate postspanend;
+    private LocalDate postSpanEnd;
 
     @NotNull
     @Column(name = "availablespanstart", nullable = false)
-    private Instant availablespanstart;
+    private Instant availableSpanStart;
 
     @Column(name = "availablespanend")
-    private Instant availablespanend;
+    private Instant availableSpanEnd;
 
     @Column(name = "bookablespandayagostart")
-    private Integer bookablespandayagostart;
+    private Integer bookableSpanDayAgoStart;
 
     @Column(name = "bookablespandayagostarttime")
-    private Integer bookablespandayagostarttime;
+    private Integer bookableSpanDayAgoStartTime;
 
     @Column(name = "bookablespandayagoend")
-    private Integer bookablespandayagoend;
+    private Integer bookableSpanDayAgoEnd;
 
     @Column(name = "bookablespandayagoendtime")
-    private Integer bookablespandayagoendtime;
+    private Integer bookableSpanDayAgoEndTime;
 
     @NotNull
     @Column(name = "recommended", nullable = false)
@@ -109,175 +109,175 @@ public class Plan {
 
     @NotNull
     @Column(name = "displaykumanokodopageflag", nullable = false)
-    private Integer displaykumanokodopageflag;
+    private Integer displayKumanoKodoPageFlag;
 
     @NotNull
     @Column(name = "orderno", nullable = false)
-    private Integer orderno;
+    private Integer orderNo;
 
     @Column(name = "searchprice")
-    private Integer searchprice;
+    private Integer searchPrice;
 
     @Column(name = "arrangementmemo", length = Integer.MAX_VALUE)
-    private String arrangementmemo;
+    private String arrangementMemo;
 
     @NotNull
     @Column(name = "offerpublic", nullable = false)
-    private Boolean offerpublic = false;
+    private Boolean offerPublic = false;
 
     @NotNull
     @Column(name = "offeragent", nullable = false)
-    private Boolean offeragent = false;
+    private Boolean offerAgent = false;
 
     @NotNull
     @Column(name = "offerevent", nullable = false)
-    private Boolean offerevent = false;
+    private Boolean offerEvent = false;
 
     @NotNull
     @Column(name = "vegetarianismflag", nullable = false)
-    private Integer vegetarianismflag;
+    private Integer vegetarianismFlag;
 
     @NotNull
     @Column(name = "vegetarianismflaga", nullable = false)
-    private Boolean vegetarianismflaga = false;
+    private Boolean vegetarianismFlagA = false;
 
     @NotNull
     @Column(name = "vegetarianismflagb", nullable = false)
-    private Boolean vegetarianismflagb = false;
+    private Boolean vegetarianismFlagB = false;
 
     @NotNull
     @Column(name = "vegetarianismflagc", nullable = false)
-    private Boolean vegetarianismflagc = false;
+    private Boolean vegetarianismFlagC = false;
 
     @NotNull
     @Column(name = "vegetarianismflagd", nullable = false)
-    private Boolean vegetarianismflagd = false;
+    private Boolean vegetarianismFlagD = false;
 
     @NotNull
     @Column(name = "vegetarianismflage", nullable = false)
-    private Boolean vegetarianismflage = false;
+    private Boolean vegetarianismFlagE = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @Column(name = "messagetosupplier_ja", length = Integer.MAX_VALUE)
-    private String messagetosupplierJa;
+    private String messageToSupplierJa;
 
     @Column(name = "messagetosupplier_en", length = Integer.MAX_VALUE)
-    private String messagetosupplierEn;
+    private String messageToSupplierEn;
 
     @Column(name = "priceunittitle_ja", length = Integer.MAX_VALUE)
-    private String priceunittitleJa;
+    private String priceUnitTitleJa;
 
     @Column(name = "priceunittitle_en", length = Integer.MAX_VALUE)
-    private String priceunittitleEn;
+    private String priceUnitTitleEn;
 
     @Column(name = "priceunitname_ja", length = Integer.MAX_VALUE)
-    private String priceunitnameJa;
+    private String priceUnitNameJa;
 
     @Column(name = "priceunitname_en", length = Integer.MAX_VALUE)
-    private String priceunitnameEn;
+    private String priceUnitNameEn;
 
     @Column(name = "unavailablespanstart")
-    private Instant unavailablespanstart;
+    private Instant unavailableSpanStart;
 
     @Column(name = "unavailablespanend")
-    private Instant unavailablespanend;
+    private Instant unavailableSpanEnd;
 
     @Column(name = "searchpricemax")
-    private Integer searchpricemax;
+    private Integer searchPriceMax;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "selectallagentflag", nullable = false)
-    private Boolean selectallagentflag = false;
+    private Boolean selectAllAgentFlag = false;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "displayticket", nullable = false)
-    private Boolean displayticket = false;
+    private Boolean displayTicket = false;
 
     @Column(name = "ticketmemotemplate_ja", length = Integer.MAX_VALUE)
-    private String ticketmemotemplateJa;
+    private String ticketMemoTemplateJa;
 
     @Column(name = "ticketmemotemplate_en", length = Integer.MAX_VALUE)
-    private String ticketmemotemplateEn;
+    private String ticketMemoTemplateEn;
 
     @NotNull
     @Column(name = "vegetarianismmeetflag", nullable = false)
-    private Boolean vegetarianismmeetflag = false;
+    private Boolean vegetarianismMeetFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismfishflag", nullable = false)
-    private Boolean vegetarianismfishflag = false;
+    private Boolean vegetarianismFishFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismseafoodflag", nullable = false)
-    private Boolean vegetarianismseafoodflag = false;
+    private Boolean vegetarianismSeafoodFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismbonitostockflag", nullable = false)
-    private Boolean vegetarianismbonitostockflag = false;
+    private Boolean vegetarianismBonitoStockFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismdairyproductsflag", nullable = false)
-    private Boolean vegetarianismdairyproductsflag = false;
+    private Boolean vegetarianismDairyProductsFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismeggflag", nullable = false)
-    private Boolean vegetarianismeggflag = false;
+    private Boolean vegetarianismEggFlag = false;
 
     @NotNull
     @Column(name = "glutenfreeflag", nullable = false)
-    private Integer glutenfreeflag;
+    private Integer glutenFreeFlag;
 
     @NotNull
     @Column(name = "glutenfreesoyproductsflag", nullable = false)
-    private Integer glutenfreesoyproductsflag;
+    private Integer glutenFreeSoyProductsFlag;
 
     @NotNull
     @Column(name = "allergyflag", nullable = false)
-    private Integer allergyflag;
+    private Integer allergyFlag;
 
     @NotNull
     @Column(name = "dietaryrestflag", nullable = false)
-    private Integer dietaryrestflag;
+    private Integer dietaryRestFlag;
 
     @NotNull
     @Column(name = "dietaryrestaflag", nullable = false)
-    private Boolean dietaryrestaflag = false;
+    private Boolean dietaryRestAFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestbflag", nullable = false)
-    private Boolean dietaryrestbflag = false;
+    private Boolean dietaryRestBFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestcflag", nullable = false)
-    private Boolean dietaryrestcflag = false;
+    private Boolean dietaryRestCFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestdflag", nullable = false)
-    private Boolean dietaryrestdflag = false;
+    private Boolean dietaryRestDFlag = false;
 
     @NotNull
     @Column(name = "visibleflag", nullable = false)
-    private Integer visibleflag;
+    private Integer visibleFlag;
 
     @NotNull
     @Column(name = "topdisp", nullable = false)
-    private Integer topdisp;
+    private Integer topDisp;
 
 }

@@ -23,36 +23,36 @@ public class Conversation {
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @NotNull
     @ColumnDefault("0")
     @Column(name = "requestid", nullable = false)
-    private Integer requestid;
+    private Integer requestId;
 
     @NotNull
     @ColumnDefault("0")
     @Column(name = "contacttype", nullable = false)
-    private Integer contacttype;
+    private Integer contactType;
 
     @Column(name = "requestdetailid")
-    private Integer requestdetailid;
+    private Integer requestDetailId;
 
     @NotNull
     @ColumnDefault("true")
     @Column(name = "isactive", nullable = false)
-    private Boolean isactive = false;
+    private Boolean isActive = false;
 
 }

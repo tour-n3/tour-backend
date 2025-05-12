@@ -8,18 +8,18 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "applicationroleclaim", schema = "dbo")
-public class Applicationroleclaim {
+public class ApplicationRoleClaim {
     @EmbeddedId
-    private ApplicationroleclaimId id;
+    private ApplicationRoleClaimId id;
 
     @Column(name = "claimtype", length = Integer.MAX_VALUE)
-    private String claimtype;
+    private String claimType;
 
     @Column(name = "claimvalue", length = Integer.MAX_VALUE)
-    private String claimvalue;
+    private String claimValue;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "identityrole_id")
-    private Applicationrole identityrole;
+    private ApplicationRole identityRole;
 
 }

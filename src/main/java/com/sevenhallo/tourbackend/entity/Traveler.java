@@ -23,27 +23,27 @@ public class Traveler {
 
     @NotNull
     @Column(name = "requestid", nullable = false)
-    private Integer requestid;
+    private Integer requestId;
 
     @NotNull
     @Column(name = "representativeflag", nullable = false)
-    private Boolean representativeflag = false;
+    private Boolean representativeFlag = false;
 
     @Size(max = 20)
     @Column(name = "familyname", length = 20)
-    private String familyname;
+    private String familyName;
 
     @Size(max = 20)
     @Column(name = "firstname", length = 20)
-    private String firstname;
+    private String firstName;
 
     @Size(max = 20)
     @Column(name = "familynamekana", length = 20)
-    private String familynamekana;
+    private String familyNameKana;
 
     @Size(max = 20)
     @Column(name = "firstnamekana", length = 20)
-    private String firstnamekana;
+    private String firstNameKana;
 
     @Column(name = "age")
     private Integer age;
@@ -52,14 +52,14 @@ public class Traveler {
     private Integer sex;
 
     @Column(name = "countrycode")
-    private Integer countrycode;
+    private Integer countryCode;
 
     @NotNull
     @Column(name = "canspeakjapanese", nullable = false)
-    private Boolean canspeakjapanese = false;
+    private Boolean canSpeakJapanese = false;
 
     @Column(name = "dietaryrest", length = Integer.MAX_VALUE)
-    private String dietaryrest;
+    private String dietaryRest;
 
     @Column(name = "remarks", length = Integer.MAX_VALUE)
     private String remarks;
@@ -70,23 +70,23 @@ public class Traveler {
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @NotNull
     @Column(name = "groupno", nullable = false)
-    private Integer groupno;
+    private Integer groupNo;
 
     @NotNull
     @Column(name = "\"order\"", nullable = false)
@@ -94,11 +94,11 @@ public class Traveler {
 
     @Size(max = 20)
     @Column(name = "middlename", length = 20)
-    private String middlename;
+    private String middleName;
 
     @Size(max = 20)
     @Column(name = "middlenamekana", length = 20)
-    private String middlenamekana;
+    private String middleNameKana;
 
     @Column(name = "birthday")
     private Instant birthday;
@@ -109,7 +109,7 @@ public class Traveler {
 
     @Size(max = 20)
     @Column(name = "cellphone", length = 20)
-    private String cellphone;
+    private String cellPhone;
 
     @Size(max = 200)
     @Column(name = "email", length = 200)
@@ -117,74 +117,74 @@ public class Traveler {
 
     @NotNull
     @Column(name = "vegetarianismflag", nullable = false)
-    private Integer vegetarianismflag;
+    private Integer vegetarianismFlag;
 
     @NotNull
     @Column(name = "vegetarianismmeetflag", nullable = false)
-    private Boolean vegetarianismmeetflag = false;
+    private Boolean vegetarianismMeetFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismfishflag", nullable = false)
-    private Boolean vegetarianismfishflag = false;
+    private Boolean vegetarianismFishFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismseafoodflag", nullable = false)
-    private Boolean vegetarianismseafoodflag = false;
+    private Boolean vegetarianismSeafoodFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismbonitostockflag", nullable = false)
-    private Boolean vegetarianismbonitostockflag = false;
+    private Boolean vegetarianismBonitoStockFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismdairyproductsflag", nullable = false)
-    private Boolean vegetarianismdairyproductsflag = false;
+    private Boolean vegetarianismDairyProductsFlag = false;
 
     @NotNull
     @Column(name = "vegetarianismeggflag", nullable = false)
-    private Boolean vegetarianismeggflag = false;
+    private Boolean vegetarianismEggFlag = false;
 
     @NotNull
     @Column(name = "glutenfreeflag", nullable = false)
-    private Integer glutenfreeflag;
+    private Integer glutenFreeFlag;
 
     @NotNull
     @Column(name = "glutenfreesoyproductsflag", nullable = false)
-    private Integer glutenfreesoyproductsflag;
+    private Integer glutenFreeSoyProductsFlag;
 
     @NotNull
     @Column(name = "allergyflag", nullable = false)
-    private Integer allergyflag;
+    private Integer allergyFlag;
 
     @Column(name = "allergyremarks", length = Integer.MAX_VALUE)
-    private String allergyremarks;
+    private String allergyRemarks;
 
     @NotNull
     @Column(name = "dietaryrestflag", nullable = false)
-    private Integer dietaryrestflag;
+    private Integer dietaryRestFlag;
 
     @NotNull
     @Column(name = "dietaryrestaflag", nullable = false)
-    private Boolean dietaryrestaflag = false;
+    private Boolean dietaryRestAFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestbflag", nullable = false)
-    private Boolean dietaryrestbflag = false;
+    private Boolean dietaryRestBFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestcflag", nullable = false)
-    private Boolean dietaryrestcflag = false;
+    private Boolean dietaryRestCFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestdflag", nullable = false)
-    private Boolean dietaryrestdflag = false;
+    private Boolean dietaryRestDFlag = false;
 
     @NotNull
     @Column(name = "dietaryrestotherflag", nullable = false)
-    private Boolean dietaryrestotherflag = false;
+    private Boolean dietaryRestOtherFlag = false;
 
     @NotNull
     @ColumnDefault("false")
     @Column(name = "dammydataflag", nullable = false)
-    private Boolean dammydataflag = false;
+    private Boolean dummyDataFlag = false;
 
 }

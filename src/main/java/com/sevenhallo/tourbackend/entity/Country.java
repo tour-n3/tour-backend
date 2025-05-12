@@ -22,7 +22,7 @@ public class Country {
 
     @NotNull
     @Column(name = "countrycode", nullable = false)
-    private Integer countrycode;
+    private Integer countryCode;
 
     @Column(name = "name_ja", length = Integer.MAX_VALUE)
     private String nameJa;
@@ -32,22 +32,22 @@ public class Country {
 
     @NotNull
     @Column(name = "orderno", nullable = false)
-    private Integer orderno;
+    private Integer orderNo;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

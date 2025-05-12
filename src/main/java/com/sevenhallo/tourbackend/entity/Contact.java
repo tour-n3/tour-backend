@@ -22,48 +22,48 @@ public class Contact {
 
     @NotNull
     @Column(name = "fromusertype", nullable = false)
-    private Integer fromusertype;
+    private Integer fromUserType;
 
     @NotNull
     @Column(name = "tousertype", nullable = false)
-    private Integer tousertype;
+    private Integer toUserType;
 
     @NotNull
     @Column(name = "fromuserid", nullable = false)
-    private Integer fromuserid;
+    private Integer fromUserId;
 
     @NotNull
     @Column(name = "touserid", nullable = false)
-    private Integer touserid;
+    private Integer toUserId;
 
     @NotNull
     @Column(name = "requestid", nullable = false)
-    private Integer requestid;
+    private Integer requestId;
 
     @Column(name = "requestdetailid")
-    private Integer requestdetailid;
+    private Integer requestDetailId;
 
     @Column(name = "message", length = Integer.MAX_VALUE)
     private String message;
 
     @NotNull
     @Column(name = "alreadyread", nullable = false)
-    private Boolean alreadyread = false;
+    private Boolean alreadyRead = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

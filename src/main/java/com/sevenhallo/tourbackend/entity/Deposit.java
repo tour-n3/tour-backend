@@ -23,7 +23,7 @@ public class Deposit {
 
     @NotNull
     @Column(name = "pricetype", nullable = false)
-    private Integer pricetype;
+    private Integer priceType;
 
     @NotNull
     @ColumnDefault("0")
@@ -32,18 +32,18 @@ public class Deposit {
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

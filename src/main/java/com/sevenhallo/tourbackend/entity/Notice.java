@@ -22,15 +22,15 @@ public class Notice {
 
     @NotNull
     @Column(name = "noticetype", nullable = false)
-    private Integer noticetype;
+    private Integer noticeType;
 
     @NotNull
     @Column(name = "usersite", nullable = false)
-    private Boolean usersite = false;
+    private Boolean userSite = false;
 
     @NotNull
     @Column(name = "usersiteen", nullable = false)
-    private Boolean usersiteen = false;
+    private Boolean userSiteEn = false;
 
     @NotNull
     @Column(name = "\"user\"", nullable = false)
@@ -42,7 +42,7 @@ public class Notice {
 
     @NotNull
     @Column(name = "supplieren", nullable = false)
-    private Boolean supplieren = false;
+    private Boolean supplierEn = false;
 
     @NotNull
     @Column(name = "agent", nullable = false)
@@ -50,39 +50,39 @@ public class Notice {
 
     @NotNull
     @Column(name = "agenten", nullable = false)
-    private Boolean agenten = false;
+    private Boolean agentEn = false;
 
     @NotNull
     @Column(name = "admin", nullable = false)
     private Boolean admin = false;
 
     @Column(name = "noticecontents_ja", length = Integer.MAX_VALUE)
-    private String noticecontentsJa;
+    private String noticeContentsJa;
 
     @Column(name = "noticecontents_en", length = Integer.MAX_VALUE)
-    private String noticecontentsEn;
+    private String noticeContentsEn;
 
     @Column(name = "releasestart")
-    private Instant releasestart;
+    private Instant releaseStart;
 
     @Column(name = "releaseend")
-    private Instant releaseend;
+    private Instant releaseEnd;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @Column(name = "title_ja", length = Integer.MAX_VALUE)
     private String titleJa;

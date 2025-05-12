@@ -21,18 +21,18 @@ public class Image {
     private Integer id;
 
     @Column(name = "imagepath", length = Integer.MAX_VALUE)
-    private String imagepath;
+    private String imagePath;
 
     @Size(max = 100)
     @Column(name = "imagename", length = 100)
-    private String imagename;
+    private String imageName;
 
     @Size(max = 100)
     @Column(name = "thnmbnailname", length = 100)
-    private String thnmbnailname;
+    private String thumbnailName;
 
     @Column(name = "contentsid")
-    private Integer contentsid;
+    private Integer contentsId;
 
     @Size(max = 100)
     @Column(name = "keywords", length = 100)
@@ -40,22 +40,22 @@ public class Image {
 
     @NotNull
     @Column(name = "imagetype", nullable = false)
-    private Integer imagetype;
+    private Integer imageType;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

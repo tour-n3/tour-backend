@@ -22,30 +22,30 @@ public class Tax {
 
     @NotNull
     @Column(name = "taxrate", nullable = false)
-    private Integer taxrate;
+    private Integer taxRate;
 
     @NotNull
     @Column(name = "enablestartdate", nullable = false)
-    private Instant enablestartdate;
+    private Instant enableStartDate;
 
     @NotNull
     @Column(name = "enableenddate", nullable = false)
-    private Instant enableenddate;
+    private Instant enableEndDate;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

@@ -23,88 +23,88 @@ public class Review {
 
     @NotNull
     @Column(name = "requestid", nullable = false)
-    private Integer requestid;
+    private Integer requestId;
 
     @NotNull
     @Column(name = "requestdetailid", nullable = false)
-    private Integer requestdetailid;
+    private Integer requestDetailId;
 
     @Size(max = 128)
     @NotNull
     @Column(name = "applicationuserid", nullable = false, length = 128)
-    private String applicationuserid;
+    private String applicationUserId;
 
     @NotNull
     @Column(name = "memberid", nullable = false)
-    private Integer memberid;
+    private Integer memberId;
 
     @NotNull
     @Column(name = "planid", nullable = false)
-    private Integer planid;
+    private Integer planId;
 
     @Column(name = "planname_ja", length = Integer.MAX_VALUE)
-    private String plannameJa;
+    private String planNameJa;
 
     @Column(name = "planname_en", length = Integer.MAX_VALUE)
-    private String plannameEn;
+    private String planNameEn;
 
     @NotNull
     @Column(name = "contentsid", nullable = false)
-    private Integer contentsid;
+    private Integer contentsId;
 
     @Column(name = "contentsname_ja", length = Integer.MAX_VALUE)
-    private String contentsnameJa;
+    private String contentsNameJa;
 
     @Column(name = "contentsname_en", length = Integer.MAX_VALUE)
-    private String contentsnameEn;
+    private String contentsNameEn;
 
     @Column(name = "modelcourseid")
-    private Integer modelcourseid;
+    private Integer modelCourseId;
 
     @Column(name = "modelcoursename_ja", length = Integer.MAX_VALUE)
-    private String modelcoursenameJa;
+    private String modelCourseNameJa;
 
     @Column(name = "modelcoursename_en", length = Integer.MAX_VALUE)
-    private String modelcoursenameEn;
+    private String modelCourseNameEn;
 
     @NotNull
     @Column(name = "usestartdate", nullable = false)
-    private Instant usestartdate;
+    private Instant useStartDate;
 
     @NotNull
     @Column(name = "satisfactionstars", nullable = false, precision = 18, scale = 2)
-    private BigDecimal satisfactionstars;
+    private BigDecimal satisfactionStars;
 
     @NotNull
     @Column(name = "roomstars", nullable = false)
-    private Integer roomstars;
+    private Integer roomStars;
 
     @NotNull
     @Column(name = "mealstars", nullable = false)
-    private Integer mealstars;
+    private Integer mealStars;
 
     @NotNull
     @Column(name = "bathstars", nullable = false)
-    private Integer bathstars;
+    private Integer bathStars;
 
     @NotNull
     @Column(name = "servicestars", nullable = false)
-    private Integer servicestars;
+    private Integer serviceStars;
 
     @NotNull
     @Column(name = "locationstars", nullable = false)
-    private Integer locationstars;
+    private Integer locationStars;
 
     @NotNull
     @Column(name = "reviewclass", nullable = false)
-    private Integer reviewclass;
+    private Integer reviewClass;
 
     @Column(name = "generation")
     private Integer generation;
 
     @NotNull
     @Column(name = "countryid", nullable = false)
-    private Integer countryid;
+    private Integer countryId;
 
     @NotNull
     @Column(name = "sex", nullable = false)
@@ -118,21 +118,21 @@ public class Review {
     private String subject;
 
     @Column(name = "replycomment", length = Integer.MAX_VALUE)
-    private String replycomment;
+    private String replyComment;
 
     @NotNull
     @Column(name = "replyvisibleflag", nullable = false)
-    private Integer replyvisibleflag;
+    private Integer replyVisibleFlag;
 
     @Column(name = "replydate")
-    private Instant replydate;
+    private Instant replyDate;
 
     @NotNull
     @Column(name = "reviewstatus", nullable = false)
-    private Integer reviewstatus;
+    private Integer reviewStatus;
 
     @Column(name = "publicdate")
-    private Instant publicdate;
+    private Instant publicDate;
 
     @NotNull
     @Column(name = "language", nullable = false)
@@ -140,27 +140,27 @@ public class Review {
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
     @Column(name = "packageid")
-    private Integer packageid;
+    private Integer packageId;
 
     @Column(name = "packagename_ja", length = Integer.MAX_VALUE)
-    private String packagenameJa;
+    private String packageNameJa;
 
     @Column(name = "packagename_en", length = Integer.MAX_VALUE)
-    private String packagenameEn;
+    private String packageNameEn;
 
 }

@@ -22,26 +22,26 @@ public class Serial {
 
     @NotNull
     @Column(name = "serialtype", nullable = false)
-    private Integer serialtype;
+    private Integer serialType;
 
     @NotNull
     @Column(name = "serialno", nullable = false)
-    private Integer serialno;
+    private Integer serialNo;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

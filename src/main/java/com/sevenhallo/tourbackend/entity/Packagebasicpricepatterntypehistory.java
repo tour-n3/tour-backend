@@ -22,18 +22,18 @@ public class Packagebasicpricepatterntypehistory {
 
     @NotNull
     @Column(name = "historydata_targethistoryid", nullable = false)
-    private Integer historydataTargethistoryid;
+    private Integer historyDataTargetHistoryId;
 
     @NotNull
     @Column(name = "historydata_enablestartdate", nullable = false)
-    private Instant historydataEnablestartdate;
+    private Instant historyDataEnableStartDate;
 
     @Column(name = "historydata_enableenddate")
-    private Instant historydataEnableenddate;
+    private Instant historyDataEnableEndDate;
 
     @NotNull
     @Column(name = "packageid", nullable = false)
-    private Integer packageid;
+    private Integer packageId;
 
     @Column(name = "name_ja", length = Integer.MAX_VALUE)
     private String nameJa;
@@ -47,26 +47,26 @@ public class Packagebasicpricepatterntypehistory {
 
     @NotNull
     @Column(name = "includecapacity", nullable = false)
-    private Boolean includecapacity = false;
+    private Boolean includeCapacity = false;
 
     @NotNull
     @Column(name = "fixedvalue", nullable = false)
-    private Boolean fixedvalue = false;
+    private Boolean fixedValue = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

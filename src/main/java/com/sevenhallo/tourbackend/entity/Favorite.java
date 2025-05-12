@@ -23,30 +23,30 @@ public class Favorite {
     @Size(max = 128)
     @NotNull
     @Column(name = "applicationuserid", nullable = false, length = 128)
-    private String applicationuserid;
+    private String applicationUserId;
 
     @NotNull
     @Column(name = "favoritetype", nullable = false)
-    private Integer favoritetype;
+    private Integer favoriteType;
 
     @NotNull
     @Column(name = "targetid", nullable = false)
-    private Integer targetid;
+    private Integer targetId;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

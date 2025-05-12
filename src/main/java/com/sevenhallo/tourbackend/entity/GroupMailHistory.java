@@ -1,0 +1,107 @@
+package com.sevenhallo.tourbackend.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.Instant;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "groupmailhistory", schema = "dbo")
+public class GroupMailHistory {
+    @Id
+    @Column(name = "id", nullable = false)
+    private Integer id;
+
+    @NotNull
+    @Column(name = "historydata_targethistoryid", nullable = false)
+    private Integer historyDataTargetHistoryId;
+
+    @NotNull
+    @Column(name = "historydata_enablestartdate", nullable = false)
+    private Instant historyDataEnableStartDate;
+
+    @Column(name = "historydata_enableenddate")
+    private Instant historyDataEnableEndDate;
+
+    @Size(max = 130)
+    @NotNull
+    @Column(name = "subject", nullable = false, length = 130)
+    private String subject;
+
+    @NotNull
+    @Column(name = "body", nullable = false, length = Integer.MAX_VALUE)
+    private String body;
+
+    @NotNull
+    @Column(name = "immediateflag", nullable = false)
+    private Boolean immediateFlag = false;
+
+    @NotNull
+    @Column(name = "plandate", nullable = false)
+    private Instant planDate;
+
+    @Size(max = 100)
+    @Column(name = "adminmemo", length = 100)
+    private String adminMemo;
+
+    @Column(name = "sendstartdate")
+    private Instant sendStartDate;
+
+    @Column(name = "sendenddate")
+    private Instant sendEndDate;
+
+    @Size(max = 250)
+    @NotNull
+    @Column(name = "frommail", nullable = false, length = 250)
+    private String fromMail;
+
+    @Size(max = 100)
+    @NotNull
+    @Column(name = "fromname", nullable = false, length = 100)
+    private String fromName;
+
+    @NotNull
+    @Column(name = "sendcount", nullable = false)
+    private Integer sendCount;
+
+    @NotNull
+    @Column(name = "sendresult", nullable = false)
+    private Integer sendResult;
+
+    @Size(max = 100)
+    @Column(name = "attachment1", length = 100)
+    private String attachment1;
+
+    @Size(max = 100)
+    @Column(name = "attachment2", length = 100)
+    private String attachment2;
+
+    @Size(max = 100)
+    @Column(name = "attachment3", length = 100)
+    private String attachment3;
+
+    @NotNull
+    @Column(name = "delflag", nullable = false)
+    private Boolean delFlag = false;
+
+    @Size(max = 128)
+    @Column(name = "updateapplicationuserid", length = 128)
+    private String updateApplicationUserId;
+
+    @NotNull
+    @Column(name = "updatedate", nullable = false)
+    private Instant updateDate;
+
+    @NotNull
+    @Column(name = "createdate", nullable = false)
+    private Instant createDate;
+
+}

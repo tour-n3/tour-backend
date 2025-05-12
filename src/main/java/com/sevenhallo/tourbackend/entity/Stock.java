@@ -22,42 +22,42 @@ public class Stock {
 
     @NotNull
     @Column(name = "targetid", nullable = false)
-    private Integer targetid;
+    private Integer targetId;
 
     @NotNull
     @Column(name = "targettype", nullable = false)
-    private Integer targettype;
+    private Integer targetType;
 
     @NotNull
     @Column(name = "targetdate", nullable = false)
-    private Instant targetdate;
+    private Instant targetDate;
 
     @NotNull
     @Column(name = "stocknumber", nullable = false)
-    private Integer stocknumber;
+    private Integer stockNumber;
 
     @NotNull
     @Column(name = "applicationnumber", nullable = false)
-    private Integer applicationnumber;
+    private Integer applicationNumber;
 
     @NotNull
     @Column(name = "availableflag", nullable = false)
-    private Boolean availableflag = false;
+    private Boolean availableFlag = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

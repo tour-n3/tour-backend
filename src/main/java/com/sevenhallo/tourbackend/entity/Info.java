@@ -23,7 +23,7 @@ public class Info {
     @Size(max = 128)
     @NotNull
     @Column(name = "applicationuserid", nullable = false, length = 128)
-    private String applicationuserid;
+    private String applicationUserId;
 
     @NotNull
     @Column(name = "count", nullable = false)
@@ -31,30 +31,30 @@ public class Info {
 
     @NotNull
     @Column(name = "sendflag", nullable = false)
-    private Boolean sendflag = false;
+    private Boolean sendFlag = false;
 
     @NotNull
     @Column(name = "reedflag", nullable = false)
-    private Boolean reedflag = false;
+    private Boolean reedFlag = false;
 
     @NotNull
     @Column(name = "tempsaveflag", nullable = false)
-    private Boolean tempsaveflag = false;
+    private Boolean tempSaveFlag = false;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

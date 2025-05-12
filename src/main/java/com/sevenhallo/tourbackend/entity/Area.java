@@ -28,26 +28,26 @@ public class Area {
 
     @NotNull
     @Column(name = "prefecturecode", nullable = false)
-    private Integer prefecturecode;
+    private Integer prefectureCode;
 
     @NotNull
     @Column(name = "orderno", nullable = false)
-    private Integer orderno;
+    private Integer orderNo;
 
     @NotNull
     @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    private Boolean delFlag = false;
 
     @Size(max = 128)
     @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    private String updateApplicationUserId;
 
     @NotNull
     @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    private Instant updateDate;
 
     @NotNull
     @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    private Instant createDate;
 
 }

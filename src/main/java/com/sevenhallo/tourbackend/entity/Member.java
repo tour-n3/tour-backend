@@ -21,31 +21,31 @@ public class Member {
     private Integer id;
 
     @Size(max = 10)
-    @Column(name = "displaymemberid", length = 10)
-    private String displaymemberid;
+    @Column(name = "displayMemberId", length = 10)
+    private String displayMemberId;
 
     @Size(max = 128)
     @NotNull
-    @Column(name = "applicationuserid", nullable = false, length = 128)
-    private String applicationuserid;
+    @Column(name = "applicationUserId", nullable = false, length = 128)
+    private String applicationUserId;
 
     @Size(max = 20)
     @NotNull
-    @Column(name = "familyname", nullable = false, length = 20)
-    private String familyname;
+    @Column(name = "familyName", nullable = false, length = 20)
+    private String familyName;
 
     @Size(max = 20)
     @NotNull
-    @Column(name = "firstname", nullable = false, length = 20)
-    private String firstname;
+    @Column(name = "firstName", nullable = false, length = 20)
+    private String firstName;
 
     @Size(max = 20)
-    @Column(name = "familynamekana", length = 20)
-    private String familynamekana;
+    @Column(name = "familyNameKana", length = 20)
+    private String familyNameKana;
 
     @Size(max = 20)
-    @Column(name = "firstnamekana", length = 20)
-    private String firstnamekana;
+    @Column(name = "firstNameKana", length = 20)
+    private String firstNameKana;
 
     @Column(name = "birthday")
     private Instant birthday;
@@ -54,13 +54,13 @@ public class Member {
     private Integer sex;
 
     @NotNull
-    @Column(name = "countrycode", nullable = false)
-    private Integer countrycode;
+    @Column(name = "countryCode", nullable = false)
+    private Integer countryCode;
 
     @Size(max = 20)
     @NotNull
-    @Column(name = "postcode", nullable = false, length = 20)
-    private String postcode;
+    @Column(name = "postCode", nullable = false, length = 20)
+    private String postCode;
 
     @Size(max = 200)
     @NotNull
@@ -73,8 +73,8 @@ public class Member {
     private String tel;
 
     @Size(max = 20)
-    @Column(name = "cellphone", length = 20)
-    private String cellphone;
+    @Column(name = "cellPhone", length = 20)
+    private String cellPhone;
 
     @Size(max = 200)
     @NotNull
@@ -82,122 +82,122 @@ public class Member {
     private String email;
 
     @NotNull
-    @Column(name = "canspeakjapanese", nullable = false)
-    private Boolean canspeakjapanese = false;
+    @Column(name = "canSpeakJapanese", nullable = false)
+    private Boolean canSpeakJapanese = false;
 
     @NotNull
-    @Column(name = "onetime", nullable = false)
-    private Boolean onetime = false;
+    @Column(name = "oneTime", nullable = false)
+    private Boolean oneTime = false;
 
     @NotNull
     @Column(name = "language", nullable = false)
     private Integer language;
 
     @NotNull
-    @Column(name = "applicationroletype", nullable = false)
-    private Integer applicationroletype;
+    @Column(name = "applicationRoleType", nullable = false)
+    private Integer applicationRoleType;
 
     @Size(max = 10)
-    @Column(name = "agentcode", length = 10)
-    private String agentcode;
+    @Column(name = "agentCode", length = 10)
+    private String agentCode;
 
     @NotNull
-    @Column(name = "sendmailpaymentflag", nullable = false)
-    private Integer sendmailpaymentflag;
+    @Column(name = "sendMailPaymentFlag", nullable = false)
+    private Integer sendMailPaymentFlag;
 
     @Size(max = 20)
     @Column(name = "fax", length = 20)
     private String fax;
 
     @NotNull
-    @Column(name = "stopuseflag", nullable = false)
-    private Boolean stopuseflag = false;
+    @Column(name = "stopUseFlag", nullable = false)
+    private Boolean stopUseFlag = false;
 
     @NotNull
-    @Column(name = "delflag", nullable = false)
-    private Boolean delflag = false;
+    @Column(name = "delFlag", nullable = false)
+    private Boolean delFlag = false;
 
     @Size(max = 128)
-    @Column(name = "updateapplicationuserid", length = 128)
-    private String updateapplicationuserid;
+    @Column(name = "updateApplicationUserId", length = 128)
+    private String updateApplicationUserId;
 
     @NotNull
-    @Column(name = "updatedate", nullable = false)
-    private Instant updatedate;
+    @Column(name = "updateDate", nullable = false)
+    private Instant updateDate;
 
     @NotNull
-    @Column(name = "createdate", nullable = false)
-    private Instant createdate;
+    @Column(name = "createDate", nullable = false)
+    private Instant createDate;
 
-    @Column(name = "branchname_ja", length = Integer.MAX_VALUE)
-    private String branchnameJa;
+    @Column(name = "branchNameJa", length = Integer.MAX_VALUE)
+    private String branchNameJa;
 
-    @Column(name = "branchname_en", length = Integer.MAX_VALUE)
-    private String branchnameEn;
+    @Column(name = "branchNameEn", length = Integer.MAX_VALUE)
+    private String branchNameEn;
 
     @Column(name = "remarks", length = Integer.MAX_VALUE)
     private String remarks;
 
-    @Column(name = "vegetarianismflag")
-    private Integer vegetarianismflag;
+    @Column(name = "vegetarianismFlag")
+    private Integer vegetarianismFlag;
 
-    @Column(name = "vegetarianismmeetflag")
-    private Boolean vegetarianismmeetflag;
+    @Column(name = "vegetarianismMeetFlag")
+    private Boolean vegetarianismMeetFlag;
 
-    @Column(name = "vegetarianismfishflag")
-    private Boolean vegetarianismfishflag;
+    @Column(name = "vegetarianismFishFlag")
+    private Boolean vegetarianismFishFlag;
 
-    @Column(name = "vegetarianismseafoodflag")
-    private Boolean vegetarianismseafoodflag;
+    @Column(name = "vegetarianismSeafoodFlag")
+    private Boolean vegetarianismSeafoodFlag;
 
-    @Column(name = "vegetarianismbonitostockflag")
-    private Boolean vegetarianismbonitostockflag;
+    @Column(name = "vegetarianismBonitoStockFlag")
+    private Boolean vegetarianismBonitoStockFlag;
 
-    @Column(name = "vegetarianismdairyproductsflag")
-    private Boolean vegetarianismdairyproductsflag;
+    @Column(name = "vegetarianismDairyProductsFlag")
+    private Boolean vegetarianismDairyProductsFlag;
 
-    @Column(name = "vegetarianismeggflag")
-    private Boolean vegetarianismeggflag;
+    @Column(name = "vegetarianismEggFlag")
+    private Boolean vegetarianismEggFlag;
 
-    @Column(name = "glutenfreeflag")
-    private Integer glutenfreeflag;
+    @Column(name = "glutenFreeFlag")
+    private Integer glutenFreeFlag;
 
-    @Column(name = "glutenfreesoyproductsflag")
-    private Integer glutenfreesoyproductsflag;
+    @Column(name = "glutenFreeSoyProductsFlag")
+    private Integer glutenFreeSoyProductsFlag;
 
-    @Column(name = "allergyflag")
-    private Integer allergyflag;
+    @Column(name = "allergyFlag")
+    private Integer allergyFlag;
 
-    @Column(name = "allergyremarks", length = Integer.MAX_VALUE)
-    private String allergyremarks;
+    @Column(name = "allergyRemarks", length = Integer.MAX_VALUE)
+    private String allergyRemarks;
 
-    @Column(name = "dietaryrestflag")
-    private Integer dietaryrestflag;
+    @Column(name = "dietaryRestFlag")
+    private Integer dietaryRestFlag;
 
-    @Column(name = "dietaryrestaflag")
-    private Boolean dietaryrestaflag;
+    @Column(name = "dietaryRestAFlag")
+    private Boolean dietaryRestAFlag;
 
-    @Column(name = "dietaryrestbflag")
-    private Boolean dietaryrestbflag;
+    @Column(name = "dietaryRestBFlag")
+    private Boolean dietaryRestBFlag;
 
-    @Column(name = "dietaryrestcflag")
-    private Boolean dietaryrestcflag;
+    @Column(name = "dietaryRestCFlag")
+    private Boolean dietaryRestCFlag;
 
-    @Column(name = "dietaryrestdflag")
-    private Boolean dietaryrestdflag;
+    @Column(name = "dietaryRestDFlag")
+    private Boolean dietaryRestDFlag;
 
-    @Column(name = "dietaryrestotherflag")
-    private Boolean dietaryrestotherflag;
+    @Column(name = "dietaryRestOtherFlag")
+    private Boolean dietaryRestOtherFlag;
 
-    @Column(name = "dietaryrest", length = Integer.MAX_VALUE)
-    private String dietaryrest;
-
-    @Size(max = 20)
-    @Column(name = "middlename", length = 20)
-    private String middlename;
+    @Column(name = "dietaryRest", length = Integer.MAX_VALUE)
+    private String dietaryRest;
 
     @Size(max = 20)
-    @Column(name = "middlenamekana", length = 20)
-    private String middlenamekana;
+    @Column(name = "middleName", length = 20)
+    private String middleName;
+
+    @Size(max = 20)
+    @Column(name = "middleNameKana", length = 20)
+    private String middleNameKana;
 
 }
